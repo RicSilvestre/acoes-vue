@@ -57,13 +57,10 @@ export default {
       const result = await response.json();
       
       const today = parseFloat(result[0].HOJE.replace("R$ ", "").replace(",", "."));
-      console.log(today)
       
       const variation = parseFloat(result[0].VARIACAO.replace("%", "").replace(",", "."))
       
-
       const yesterday = today/(1 + (variation/100))
-      console.log(yesterday)
       
       this.chartData.data.datasets[0].data = [yesterday, today]
 

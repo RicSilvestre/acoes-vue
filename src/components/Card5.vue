@@ -89,10 +89,16 @@ export default {
 }
 
 .stock-row {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  text-align: center;
+  text-align: center; */
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   border-bottom: .5px solid #fff;
   margin-top: 1rem;
+}
+
+.stock-row span:nth-child(3) {
+  text-align: left;
 }
 </style>

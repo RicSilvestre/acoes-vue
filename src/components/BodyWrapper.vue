@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="body-wrapper">
     <Header></Header>
     <Card5 :childData="apiData"></Card5>
     <GraphWrapper></GraphWrapper>
@@ -28,13 +28,14 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 section {
   width: 80%;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  
   height: 80%;
 }
 </style>

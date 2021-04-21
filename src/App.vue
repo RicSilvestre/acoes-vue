@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
-    <BodyWrapper :apiData="apiData"></BodyWrapper>
+    <router-view :apiData="apiData"></router-view>
   </div>
 </template>
 
 <script>
-import BodyWrapper from './components/BodyWrapper.vue';
 import Navigation from './components/Navigation.vue';
 
 export default {
@@ -17,7 +16,6 @@ export default {
     }
   },
   components: {
-    BodyWrapper,
     Navigation
   },
   created: async function() {
@@ -52,7 +50,20 @@ body {
     height: 100vh;
 }
 
-nav, .card-5, .graph-wrapper {
+nav, .card-5, .graph-wrapper, .configuracoes, .favcard-wrapper {
     background-color: #2f3035;
+}
+
+.router-link-active {
+  height: 300px;
+  width: 300px
+}
+
+.body-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  height: 80%;
+  margin-top: 3rem;
 }
 </style>
